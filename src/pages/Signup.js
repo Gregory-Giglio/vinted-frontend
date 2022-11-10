@@ -73,10 +73,9 @@ const Signup = ({handleToken}) => {
                     onChange={(event) => {
                         setNewsletter(event.target.value);
                     }}
-                />
-                <span>S'inscrire à notre newsletter</span>
+                /><span>S'inscrire à notre newsletter</span>
 
-                <input type="Submit"/>
+                <button type="Submit">S'inscrire</button>
             </form>
         </div>
 
