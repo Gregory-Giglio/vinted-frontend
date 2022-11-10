@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Offer from "./pages/Offer";
 import NoMatch from "./pages/NoMatch";
 import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 
 import Header from "./assets/components/Header";
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/offer/:id" element={<Offer />}/>
         <Route path="/signup" element={<Signup handleToken={handleToken}/>}/>
+        <Route path="/login" element={<Login handleToken={handleToken}/>}/>
         <Route path='*' element={<NoMatch />} />
       </Routes>
     </Router>
