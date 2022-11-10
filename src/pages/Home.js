@@ -1,18 +1,17 @@
 import bannerimg from "../assets/img/banner-hero-vinted.jpg";
-import Header from "../assets/components/Header";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Offers from "../assets/components/Offers";
 
 
-const Home = ({Link}) => {
+const Home = () => {
       const [data, setData] = useState({});
       const [isLoading, setIsLoading] = useState(true);
 
       const fetchData = async () => {
             const response = await axios.get("https://lereacteur-vinted-api.herokuapp.com/offers");
             setData(response.data);
-            setIsLoading(false);            
+            setIsLoading(false);
       };
       
       useEffect(()=>{
@@ -24,7 +23,7 @@ const Home = ({Link}) => {
             <span>En cours de chargement...</span>
       ) : (
             <div>
-                  <Header />
+                  
                   <div className='hero'>
                         <img src={bannerimg} alt="banner" />
                   </div>

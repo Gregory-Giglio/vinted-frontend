@@ -30,3 +30,24 @@ header {
   height: 400px;
   object-fit: cover;
 }
+
+.background-grey {
+  background-color: #EBEDEE;
+}
+
+.offer-detail {
+  display: flex;  
+  justify-content: space-between;
+}
+
+.offer-right {
+  width: 300px;
+  background-color: white;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}

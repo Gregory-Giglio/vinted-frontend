@@ -9,7 +9,7 @@ const Header = () => {
             <form action="Submit">
                 <input type="text" />
             </form>
-            <button>S'inscrire</button>
+            <Link to="/signup"><button>S'inscrire</button></Link>
             <button>Se connecter</button>
             <button>Vends tes articles</button>
         </header>
