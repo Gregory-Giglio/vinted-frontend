@@ -31,7 +31,7 @@ const Login = ({handleToken}) => {
                             navigate("/");
                         }
                     } catch (error) {
-                        console.error(error.message);
+                        console.error(error.response.data);
                     }
                 }}
             >

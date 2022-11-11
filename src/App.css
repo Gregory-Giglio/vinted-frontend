@@ -8,10 +8,20 @@ header {
   gap: 30px;
 }
 
+h2 {
+  font-size: 24px;  
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .hero img {
   width: 100%;
   height: 680px;
   object-fit: cover;
+  margin-bottom: 30px;
 }
 
 .container {
@@ -22,7 +32,15 @@ header {
 .offers {
   display: flex;
   gap: 15px;
+  justify-content: space-around;
   flex-wrap: wrap;
+}
+
+
+.offer .avatar {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
 }
 
 .offer img {
@@ -31,18 +49,99 @@ header {
   object-fit: cover;
 }
 
+.offer-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;  
+  margin-bottom: 10px;
+}
+
+.nodecoration {
+  text-decoration: none;
+  color: grey;
+}
+
+.color-black {
+  color: black;
+}
+
+.color-grey{
+  color: grey;
+}
+
 .background-grey {
   background-color: #EBEDEE;
+  min-height: 100vh;
 }
 
 .offer-detail {
   display: flex;  
   justify-content: space-between;
+  
+}
+
+.offer-detail img {
+  margin: 30px;
+  width: 450px;
 }
 
 .offer-right {
-  width: 300px;
+  width: 350px;
   background-color: white;
+  margin: 30px;
+  padding: 40px;  
+}
+
+.offer-right-details {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid grey;
+}
+
+.offer-right-detail{
+  display: flex;
+  gap: 15px;
+}
+
+.offer-right-detail span{
+  flex: 1;
+}
+
+.offer-right-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.offer-right-owner {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.offer-right-owner img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.offer-right-buy {
+  width: 100%;
+  margin-top: 40px;
+  height: 40px;
+  border-radius: 5px;
+  border-style: hidden;
+  color: white;
+  background-color: #00757F;
+}
+
+.offer-right-buy:hover {
+  cursor:pointer;
 }
 
 .signup {

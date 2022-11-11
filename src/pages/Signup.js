@@ -34,7 +34,7 @@ const Signup = ({handleToken}) => {
                             navigate("/");
                         }
                     } catch (error) {
-                        console.error(error.message);
+                        console.error(error.response.data);
                     }
 
                                         
@@ -68,10 +68,10 @@ const Signup = ({handleToken}) => {
                 />
 
                 <input 
-                    type="checkbox" 
-                    value={newsletter}
-                    onChange={(event) => {
-                        setNewsletter(event.target.value);
+                    type="checkbox"
+                    checked={newsletter}
+                    onChange={() => {
+                        setNewsletter(!newsletter);
                     }}
                 /><span>S'inscrire à notre newsletter</span>
 
