@@ -1,6 +1,7 @@
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 
 const Signup = ({handleToken}) => {
@@ -13,7 +14,6 @@ const Signup = ({handleToken}) => {
     
     return (
         <div className="container signup">
-            <h1>S'inscrire</h1>
             <form
                 className="signup"
                 onSubmit={async (event) => {
@@ -40,7 +40,8 @@ const Signup = ({handleToken}) => {
                                         
                 }}
             >
-                <input
+                <h1>S'inscrire</h1>
+                <input className="signup-input"
                     type="text" 
                     value={user}
                     placeholder="Nom d'utilisateur"
@@ -49,7 +50,7 @@ const Signup = ({handleToken}) => {
                     }}
                 />
 
-                <input 
+                <input className="signup-input"
                     type="email" 
                     value={email}
                     placeholder="Email"
@@ -58,7 +59,7 @@ const Signup = ({handleToken}) => {
                     }}
                 />
 
-                <input 
+                <input className="signup-input"
                     type="password"
                     value={password}
                     placeholder="Mot de passe"
@@ -67,16 +68,19 @@ const Signup = ({handleToken}) => {
                     }}
                 />
 
+                <p>
                 <input 
                     type="checkbox"
                     checked={newsletter}
                     onChange={() => {
                         setNewsletter(!newsletter);
                     }}
-                /><span>S'inscrire à notre newsletter</span>
+                /><span> S'inscrire à notre newsletter</span>
+                </p>
 
-                <button type="Submit">S'inscrire</button>
+                <button type="Submit" className="button-register">S'inscrire</button>
             </form>
+            <Link to="/login" className="nodecoration"><p>Tu as déjà un compte ? Connecte-toi !</p></Link>
         </div>
 
     );

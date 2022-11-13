@@ -1,6 +1,7 @@
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 
 const Login = ({handleToken}) => {
@@ -11,7 +12,6 @@ const Login = ({handleToken}) => {
     
     return (
         <div className="container login">
-            <h1>Se connecter</h1>
             <form
                 className="login"
                 onSubmit={async (event) => {
@@ -35,7 +35,8 @@ const Login = ({handleToken}) => {
                     }
                 }}
             >
-                <input
+                <h1>Se connecter</h1>
+                <input className="signup-input"
                     type="email"
                     value={email}
                     placeholder="Email"
@@ -43,7 +44,7 @@ const Login = ({handleToken}) => {
                         setEmail(event.target.value);
                     }}
                 />
-                <input 
+                <input className="signup-input"
                     type="password"
                     value={password}
                     placeholder="Mot de passe"
@@ -51,8 +52,9 @@ const Login = ({handleToken}) => {
                         setPassword(event.target.value);
                     }}
                 />
-                <button type="Submit">Se connecter</button>
+                <button type="Submit" className="button-register">Se connecter</button>
             </form>
+            <Link to="/signup" className="nodecoration"><p>Pas encore de compte ? inscris-toi !</p></Link>
         </div>
     );
 };

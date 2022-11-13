@@ -7,7 +7,7 @@ const Header = ({token, handleToken}) => {
             <Link to="/"><img src={logo} alt="Logo-vinted" /></Link>
             
             <form action="Submit">
-                <input type="text" />
+                <input className="search" type="text" placeholder="Recherche des articles"/>
             </form>
             
             {token ? (
@@ -15,17 +15,18 @@ const Header = ({token, handleToken}) => {
                     onClick={()=>{
                         handleToken(null);
                     }}
+                    className="header-button"
                 >
                     Se déconnecter
                 </button>
             ) : (
                 <>
-                    <Link to="/signup"><button>S'inscrire</button></Link>
-                    <Link to="/login"><button>Se connecter</button></Link>
+                    <Link to="/signup"><button className="header-button">S'inscrire</button></Link>
+                    <Link to="/login"><button className="header-button">Se connecter</button></Link>
                 </>
             )}
 
-            <button>Vends tes articles</button>
+            <button className="header-sellbutton">Vends tes articles</button>
         </header>
     );
 };
