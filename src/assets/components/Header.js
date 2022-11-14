@@ -1,15 +1,18 @@
 import logo from "../img/logo-vinted.svg";
 import {Link} from "react-router-dom";
 
-const Header = ({token, handleToken}) => {
+const Header = ({token, handleToken, search, setSearch}) => {
     return (
         <header>
             <Link to="/"><img src={logo} alt="Logo-vinted" /></Link>
             
-            <form action="Submit">
-                <input className="search" type="text" placeholder="Recherche des articles"/>
-            </form>
-            
+            <input 
+                className="search" type="text" placeholder="Recherche des articles" value={search}
+                onChange={(event)=>{
+                    setSearch(event.target.value);
+                }}
+            />
+                        
             {token ? (
                 <button
                     onClick={()=>{
@@ -26,7 +29,7 @@ const Header = ({token, handleToken}) => {
                 </>
             )}
 
-            <button className="header-sellbutton">Vends tes articles</button>
+            <Link to="/publish"> <button className="header-sellbutton">Vends tes articles</button></Link>
         </header>
     );
 };

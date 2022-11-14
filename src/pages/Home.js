@@ -4,20 +4,20 @@ import axios from "axios";
 import Offers from "../assets/components/Offers";
 
 
-const Home = () => {
+const Home = ({search}) => {
       const [data, setData] = useState({});
       const [isLoading, setIsLoading] = useState(true);
 
-      const fetchData = async () => {
-            const response = await axios.get("https://lereacteur-vinted-api.herokuapp.com/offers");
-            setData(response.data);
-            setIsLoading(false);
-      };
-      
+            
       useEffect(()=>{
+            const fetchData = async () => {
+                  const response = await axios.get(`https://lereacteur-vinted-api.herokuapp.com/offers?title=${search}`);
+                  setData(response.data);
+                  setIsLoading(false);
+            };
             fetchData();
             
-      }, []);
+      }, [search]);
 
       return isLoading ? (
             <span>En cours de chargement...</span>

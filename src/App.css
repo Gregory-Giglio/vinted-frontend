@@ -221,3 +221,8 @@ header button:hover{
   font-size: 12px;
 }
 
+.publish-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
