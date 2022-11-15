@@ -286,3 +286,8 @@ header button:hover{
   justify-content: center;
   align-items: center;
 }
+
+.payment {
+  margin-top: 30px;
+  background-color: white;
+}
