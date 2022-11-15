@@ -78,6 +78,11 @@ h3 {
   min-height: 100vh;
 }
 
+.background-white {
+  background-color: white;
+  border: solid 1px rgb(214, 214, 214);
+}
+
 .offer-detail {
   display: flex;  
   justify-content: space-between;
@@ -225,4 +230,59 @@ header button:hover{
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding-top: 30px;
+}
+
+.publish-input {
+  border: none;
+  border-bottom: 1px solid rgb(235, 231, 231);
+  height: 35px;
+  outline: none;
+  background-color: none;
+  width: 630px;
+}
+
+.publish-detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.publish-detail textarea {
+  resize: none;
+  height: 80px;
+}
+
+.publish-input:focus {
+  border-bottom: 1px solid #00757F;
+}
+
+.border-bottom-grey {
+  border-bottom: 1px solid rgb(235, 231, 231);
+}
+
+.publish-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.publish-button button {
+  height: 40px;
+  width: 115px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color:#00757F;
+  font-size: 18px;
+}
+.publish-button button:hover {
+  cursor: pointer;
+}
+
+.publish-file {
+  background-color: white;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
