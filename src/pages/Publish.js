@@ -13,7 +13,7 @@ const Publish = () => {
     const [color, setColor] = useState("");
     const [condition, setCondition] = useState("");
     const [city, setCity] = useState("");
-    const [price, setPrice] = useState();
+    const [price, setPrice] = useState(Number);
     
     const token = Cookies.get("token");
     
@@ -46,7 +46,7 @@ const Publish = () => {
         //   "https://lereacteur-vinted-api.herokuapp.com/offer/publish"
         // "https://site--backend-vinted--4pswvlk4zjzj.code.run/offer/publish"
           await axios.post(
-            "https://lereacteur-vinted-api.herokuapp.com/offer/publish",
+            "https://site--backend-vinted--4pswvlk4zjzj.code.run/offer/publish",
             formData,
             {
               headers: {

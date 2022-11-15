@@ -15,15 +15,20 @@ import Header from "./assets/components/Header";
 
 function App() {
   const [token, setToken] = useState(Cookies.get("token") || null);
+  const [userId, setUserId] = useState(Cookies.get("userid") || null);
   const [search, setSearch] = useState("");
 
-  const handleToken = (token) => {
+  const handleToken = (token, userId) => {
     if (token) {
       setToken (token);
+      setUserId (userId);
       Cookies.set("token", token, {expires: 7});
+      Cookies.set("userid", userId, {expires: 7});
     } else {
       setToken(null);
       Cookies.remove("token");
+      setUserId(null);
+      Cookies.remove("userid");
     }
 
   };
@@ -31,7 +36,7 @@ function App() {
 
   return (
     <Router>
-      <Header token={token} handleToken={handleToken} search={search} setSearch={setSearch}/>
+      <Header token={token} userId={userId} handleToken={handleToken} search={search} setSearch={setSearch}/>
       <Routes>
         <Route path="/" element={<Home search={search}/>} />
         <Route path="/offer/:id" element={<Offer />}/>

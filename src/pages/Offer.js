@@ -15,7 +15,7 @@ const Offer = () => {
             try {
                 // https://lereacteur-vinted-api.herokuapp.com/offer/${id}
                 // https://site--backend-vinted--4pswvlk4zjzj.code.run/offer/${id}
-                const response = await axios.get(`https://lereacteur-vinted-api.herokuapp.com/offer/${id}`);
+                const response = await axios.get(`https://site--backend-vinted--4pswvlk4zjzj.code.run/offer/${id}`);
                 setData(response.data);
                 setIsLoading(false);
     
@@ -42,9 +42,9 @@ const Offer = () => {
                                 const objectKey = Object.keys(detail)[0];
                                 return (
                                     <div key={index} className="offer-right-detail">
-                                    {/* J'affiche la clef de l'objet */}
+                                    {/* J'affiche la clé de l'objet */}
                                     <span className="color-grey">{objectKey} : </span>
-                                    {/* J'affiche le contenu de la clef */}
+                                    {/* J'affiche le contenu de la clé */}
                                     <span>{detail[objectKey]}</span>
                                     </div>
                                 );
@@ -63,7 +63,7 @@ const Offer = () => {
                                 <p>{data.owner.account.username}</p>                                    
                             </div>
                        </div>
-                       <Link to="/payment"><button className="offer-right-buy">Acheter</button></Link>
+                       <Link to="/payment" state={{ title: data.product_name, price: data.product_price}}><button className="offer-right-buy">Acheter</button></Link>
                     </div>
                 </div>
             </div>

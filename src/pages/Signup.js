@@ -28,10 +28,10 @@ const Signup = ({handleToken}) => {
                     try {
                         // https://lereacteur-vinted-api.herokuapp.com/user/signup
                         // https://site--backend-vinted--4pswvlk4zjzj.code.run/user/signup
-                        const response = await axios.post(`https://lereacteur-vinted-api.herokuapp.com/user/signup`, data);
+                        const response = await axios.post(`https://site--backend-vinted--4pswvlk4zjzj.code.run/user/signup`, data);
                                                 
                         if (response.data.token) {
-                            handleToken(response.data.token);
+                            handleToken(response.data.token, response.data._id);
                             navigate("/");
                         }
                     } catch (error) {

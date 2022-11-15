@@ -13,7 +13,7 @@ const Home = ({search}) => {
             const fetchData = async () => {
                   // `https://lereacteur-vinted-api.herokuapp.com/offers?title=${search}`
                   // `https://site--backend-vinted--4pswvlk4zjzj.code.run/offers?title=${search}`
-                  const response = await axios.get(`https://lereacteur-vinted-api.herokuapp.com/offers?title=${search}`);
+                  const response = await axios.get(`https://site--backend-vinted--4pswvlk4zjzj.code.run/offers?title=${search}`);
                   setData(response.data);
                   setIsLoading(false);
             };
