@@ -59,7 +59,7 @@ const CheckoutForm = ({title, price}) => {
             <div className="payment-total">
                 <span>Total</span><span>{(price + 0.40 + 0.80).toFixed(2)} €</span>
             </div>
-            <p>Il ne vous reste plus qu'un étape pour vous offrir {title} 😍. Vous allez payer {(price + 0.40 + 0.80).toFixed(2)} € (frais de protection et frais de port inclus).</p>
+            <p className="payment-description">Il ne vous reste plus qu'un étape pour vous offrir <span className="bold">{title}</span> 😍. Vous allez payer <span className="bold">{(price + 0.40 + 0.80).toFixed(2)} €</span> (frais de protection et frais de port inclus).</p>
             <form onSubmit={handleSubmit}>
                 <CardElement className="payment-card" />
                 {isLoading ? (
